@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   
+    <p id="id1">first paragraph</p>
+    <button type="button" onclick="myFunction()">click me</button>
+    <p id="demo"></p>
+
+    <script>
+         function myFunction(){
+            document.getElementById("id1").innerHTML="changed paragraph";
+        }
+        
+        let car="volvo"+16+4;
+        let owner="johnson";
+        let ownerlocation="yangon";
+
+        document.getElementById("demo").innerHTML=car+"<br>"+owner+"<br>"+ownerlocation;
+    </script>
+    
+</body>
+</html>
