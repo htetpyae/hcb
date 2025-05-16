@@ -11,6 +11,8 @@
     <p id="id1">first paragraph</p>
     <button type="button" onclick="myFunction()">click me</button>
     <p id="demo"></p>
+    <p id="name"></p>
+    <p id="hh"></p>
 
     <script>
          function myFunction(){
@@ -22,7 +24,39 @@
         let ownerlocation="yangon";
 
         document.getElementById("demo").innerHTML=car+"<br>"+owner+"<br>"+ownerlocation;
-    </script>
-    
+
+        const person={
+            firstName:"john",
+            lastName:"son",
+            age:30,
+    //         fullName: function() {
+    // return this.firstName + " " + this.lastName;
+            };
+        
+        person.info=function(){
+            return this.firstName +"" +this.lastName+" "+this.age;
+            // document.getElementById("name").innerHTML="firstName"+this.firstName+"<br>"+
+            // "lastName"+this.lastName+"<br>"+"age"+this.age;
+           
+        }
+         document.getElementById("name").innerHTML=person.info();
+
+         function personInfo(name,age,gender){
+            this.pname=name;
+            this.page=age;
+            this.pgender=gender;
+         }
+
+         const singer= new personInfo("jk",30,"male");
+         const model= new personInfo("niniLinEain",30,"female");
+
+         singer.changeAge=function(age){
+            this.page=age;
+         }
+
+         singer.changeAge(29);
+         document.getElementById("hh").innerHTML=singer.page;
+  </script>  
+  
 </body>
 </html>
